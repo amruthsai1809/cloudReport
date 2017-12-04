@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#Introduction">Introduction</a>
+  <a href="#Motivation">Motivation</a>
+  <a href="#Dataset">Dataset</a>
+  <a href="#Algorithms">Algorithms</a>
+  <a href="#Challenges">Challenges</a>
+  <a href="#Implementation">Implementation</a>
+  <a href="#Results">Results</a>
+</div>
+
+<div class="main" style="text-align:center;margin-right: 150px;
+    margin-left: 80px;">
+
+
+  <h1>Twitter sentiment analysis</h1>
+  <div id="Introduction" style="padding-top: 25px">
+    <h2>Introduction</h2>
+    <p>In this project, we try to analyze the sentiment behind the tweets. By training the model with huge dataset obtained from sentiment 140, we try to identify whether a tweet is positive or negative. This project has many applications in real world. If a company posts an update about their new idea on their product, it is important to know whether people would like it or not. By analyzing the comments section of the post, some insight can be drawn whether the update was liked by many people or not.</p>
+  </div>
+
+
+  <div id="Motivation" style="padding-top: 25px">
+    <h2>Motivation</h2>
+    <p>We found this project interesting because not only big industries want to know what people think about them and their products, but also every individual to some extent would be curious to know what do people feel about their post.</p>
+  </div>
+
+
+  <div id="Dataset" style="padding-top: 25px">
+    <h2>Dataset</h2>
+    <p>We obtained the data from sentiment 140. Sentiment 140 has provided over a million tweets. The tweets have been classified into two classes. Class ‘0’ indicates negative tweets and Class ‘1’ indicates positive tweets.
+</p>
+<p><a href="http://help.sentiment140.com/for-students/">link to dataset</a></p>
+
+<p>Below is the snippet of our dataset</p>
+<img src="dataset.jpg" alt="sentiment 140 dataset" width="850" height="850">
+  </div>
+
+  <div id="Algorithms" style="padding-top: 25px">
+    <h2>Algorithms</h2>
+    <p>We implemented this project in two different ways. We used Naïve Bayes algorithm in first part and KNN algorithm in second part. In the first part, we implemented TFIDF and Naive Bayes algorithms and in the second part we implemented TFIDF and KNN algorithms. In summary below are the algorithms we implemented in our project.
+</p>
+<h3 style="text-align: left;">TFIDF</h3>
+<p style="text-align: left;">Instead of using raw frequencies of words, implementing naïve bayes and KNN algorithms using TFIFD scores would significantly improves the performance. So we calculate the TFIDF scores of each word in every tweet.
+</p>
+<h3 style="text-align: left;">Naive Bayes</h3>
+<p style="text-align: left;">Given a hypothesis H and evidence E, Bayes’ theorem states that the relationship between the probability of the hypothesis P(H) before getting the evidence and the probability P(H | E) of the hypothesis after getting the evidence is P (H | E) = (P ( E | H) * P (H) ) / P(E)
+
+</p>
+<h3 style="text-align: left;">KNN</h3>
+<p style="text-align: left;">K-nearest neighbors, is an algorithm used in classification and regression. We are using KNN for classification in our project. Given the input, we find 9 tweets which are highly relevant to our given input. We find the class to which most of the 9 tweets belong to. We assign that class to our given input.
+
+
+
+
+</p>
+  </div>
+
+
+
+
+  <div id="Challenges" style="padding-top: 25px">
+    <h2>Challenges</h2>
+    <p></p>
+  </div>
+
+
+  <div id="Implementation" style="padding-top: 25px">
+    <h2>Implementation</h2>
+    <h3 style="text-align: left;">TFIDF</h3>
+    <p style="text-align: left;">The TFIDF scores are calculated as follows
+    </p>
+    <p style="text-align: left;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • TFIDF(word, tweet) = wordFrequency(word, tweet) * IDF(word)
+</p>
+
+<p style="text-align: left;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • wordFrequency(word,tweet) = 1 + log 10( number of occurrences of the word in tweet)
+
+</p>
+<p style="text-align: left;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • IDF(word) = log 10 (Total number of tweets /number of tweets containing the word)
+
+</p>
+<h3 style="text-align: left;">Naive Bayes</h3>
+<p style="text-align: left">Given a certain text input we try to identify which class the text belongs to. Below is the brief explanation of the implementation.
+</p>
+<p style="text-align: left">Suppose we give x as text input. Let x1, x2 … xd be the words in the input. The probability of the input occurring given a certain class has occurred is
+
+</p>
+<p>P(x∣cj)=P(x1∣cj)⋅P(x2∣cj)⋅…⋅P(xd∣cj)
+</p>
+<p style="text-align: left">We calculate the probabilities for each class by using the above formula. After that we multiply it with the probability of occurrence of the class.
+</p>
+<p style="text-align: left">Now we assign the class to the input which has got the highest value i.e, Cnb = argmax P(cj)⋅P(x1∣cj)⋅P(x2∣cj)⋅…⋅P(xd∣cj) where ‘J’ ranges from 0 to 1.
+</p>
+<p style="text-align: left"> We can calculate P(xk∣cj) as follows, P(xk∣cj) =  Nck  + 1 / Nc + N
+</p>
+<p style="text-align: left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where</p>
+<p style="text-align: left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Nck is sum of TFIDF of  the word K occurred in all tweets of class ‘C’
+</p>
+<p style="text-align: left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Nc is sum of TFIDF of words in all tweets of class ‘C’
+
+</p>
+<p style="text-align: left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• N is sum of TFIDF of all words in all tweets
+
+</p>
+
+<h3 style="text-align: left">KNN</h3>
+<p></p>
+  </div>
+
+
+
+  <div id="team" style="padding-top: 25px">
+    <h2>Our team and contributions</h2>
+    <p>Gowtham Kommineni</p>
+    <p>Mounica Jagga</p>
+    <p>Amruth Sai Gandavarapu</p>
+  </div>
+
+  <div id="references" style="padding-top: 25px">
+    <h2>References</h2>
+    <p>[1] Rennie, Jason D., Lawrence Shih, Jaime Teevan, and David R. Karger. "Tackling the poor assumptions of naive bayes text classifiers." In Proceedings of the 20th International Conference on Machine Learning (ICML-03), pp. 616-623. 2003.</p>
+    <p>[2] Kibriya, Ashraf M., Eibe Frank, Bernhard Pfahringer, and Geoffrey Holmes. "Multinomial Naive Bayes for Text Categorization Revisited." In Australian Conference on Artificial Intelligence, vol. 3339, pp. 488-499. 2004.</p>
+    <p>[3] Zhang, Hao, Alexander C. Berg, Michael Maire, and Jitendra Malik. "SVM-KNN: Discriminative nearest neighbor classification for visual category recognition." In Computer Vision and Pattern Recognition, 2006 IEEE Computer Society Conference on, vol. 2, pp. 2126-2136. IEEE, 2006.</p>
+    <p>[4] Zhang, Min-Ling, and Zhi-Hua Zhou. "ML-KNN: A lazy learning approach to multi-label learning." Pattern recognition 40, no. 7 (2007): 2038-2048.</p>
+  </div>
+
+
+</div>
+
+</body>
+</html>
