@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
+
+
 </head>
 <body>
 
@@ -34,11 +38,11 @@
 
   <div id="Dataset" style="padding-top: 25px">
     <h2>Dataset</h2>
-    <p>We obtained the data from sentiment 140. Sentiment 140 has provided over a million tweets. The tweets have been classified into two classes. Class ‘0’ indicates negative tweets and Class ‘1’ indicates positive tweets.
+    <p>We obtained the data from sentiment 140. Sentiment 140 has provided with 1578627 tweets. The size of the file is about 150MB. The tweets have been classified into two classes. Class ‘0’ indicates negative tweets and Class ‘1’ indicates positive tweets.
 </p>
 <p><a href="http://help.sentiment140.com/for-students/">link to dataset</a></p>
 
-<p>Below is the snippet of our dataset</p>
+<p>Below is a snippet of our dataset</p>
 <img src="dataset.jpg" alt="sentiment 140 dataset" width="850" height="850">
   </div>
 
@@ -73,6 +77,9 @@
 
   <div id="Implementation" style="padding-top: 25px">
     <h2>Implementation</h2>
+    <h3 style="text-align: left;">Pre-processing</h3>
+    <p> We used tokenizer to identify words in a given tweet. Some common words like is, the, etc do not provide critical information and take up space. In order to avoid this we removed these kind of words before imlplementing any algorithms.
+    we also removed redundant information associated with a word. For example in the words like Hadoop123, we removed the digits 123 in it.  </p>
     <h3 style="text-align: left;">TFIDF</h3>
     <p style="text-align: left;">The TFIDF scores are calculated as follows
     </p>
@@ -83,6 +90,9 @@
 
 </p>
 <p style="text-align: left;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • IDF(word) = log 10 (Total number of tweets /number of tweets containing the word)
+
+</p>
+<p style="text-align: left;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • sometimes if a tweet is too big then the words in it can have higher TFIDF scores. It does not mean that the tweet is highly important. In order to avoid this situation we normalized all the TFIDF scores.
 
 </p>
 <h3 style="text-align: left;">Naive Bayes</h3>
@@ -118,7 +128,7 @@
 
   <div id="Results" style="padding-top: 25px">
     <h2>Results</h2>
-    
+
   </div>
 
 
