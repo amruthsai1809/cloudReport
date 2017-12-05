@@ -24,7 +24,7 @@
   <h1>Twitter Sentiment Analysis</h1>
   <div id="Introduction" style="padding-top: 25px">
     <h2>Introduction</h2>
-    <p>In this project, we try to analyze the sentiment behind the tweets. By training the model with huge dataset obtained from sentiment 140, we try to identify whether a tweet is positive or negative. This project has many applications in real world. If a company posts an update about their new idea on their product, it is important to know whether people would like it or not. By analyzing the comments section of the post, some insight can be drawn whether the update was liked by many people or not.</p>
+    <p>In this project, we try to analyze the sentiment behind the tweets. By training the model with huge dataset obtained from sentiment 140, we try to identify whether a tweet is positive or negative. This project has many applications in real world. If a company posts an update about their new idea on their product, it is important to know whether people would like it or not. By analyzing the comments section of the post, some insight can be drawn whether the update was liked by many people or not. We implemented our project on Spark.</p>
   </div>
 
 
@@ -69,7 +69,7 @@
 
   <div id="Challenges" style="padding-top: 25px">
     <h2>Challenges</h2>
-    <p> We had to join multiple RDDs for Naive Bayes algorithm, which was time taking and a little complicated to implement. </p>
+    <p> We had to join multiple RDDs for Naive Bayes algorithm, which was time taking and a little complicated to implement. As the data we are providing for training is huge which has more that a million tweets, implementing some steps like joining the RDDs and finding the cosine similarites between the tweets were taking a lot of time. We optimized our code as much as possible to minimize the time taken for execution. </p>
   </div>
 
 
