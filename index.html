@@ -23,7 +23,7 @@
     margin-left: 80px;">
 
 
-  <h1>Twitter sentiment analysis</h1>
+  <h1>Twitter Sentiment Analysis</h1>
   <div id="Introduction" style="padding-top: 25px">
     <h2>Introduction</h2>
     <p>In this project, we try to analyze the sentiment behind the tweets. By training the model with huge dataset obtained from sentiment 140, we try to identify whether a tweet is positive or negative. This project has many applications in real world. If a company posts an update about their new idea on their product, it is important to know whether people would like it or not. By analyzing the comments section of the post, some insight can be drawn whether the update was liked by many people or not.</p>
@@ -78,8 +78,8 @@
   <div id="Implementation" style="padding-top: 25px">
     <h2>Implementation</h2>
     <h3 style="text-align: left;">Pre-processing</h3>
-    <p> We used tokenizer to identify words in a given tweet. Some common words like is, the, etc do not provide critical information and take up space. In order to avoid this we removed these kind of words before imlplementing any algorithms.
-    we also removed redundant information associated with a word. For example in the words like Hadoop123, we removed the digits 123 in it.  </p>
+    <p style="text-align: left;">We used tokenizer to identify words in a given tweet. Some common words like is, the, etc do not provide critical information and take up space. In order to avoid this we removed these kind of words before imlplementing any algorithms.
+    We also removed redundant information associated with any word. For example in the words like Hadoop123, we removed the digits 123 in it.  </p>
     <h3 style="text-align: left;">TFIDF</h3>
     <p style="text-align: left;">The TFIDF scores are calculated as follows
     </p>
@@ -92,7 +92,7 @@
 <p style="text-align: left;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • IDF(word) = log 10 (Total number of tweets /number of tweets containing the word)
 
 </p>
-<p style="text-align: left;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • sometimes if a tweet is too big then the words in it can have higher TFIDF scores. It does not mean that the tweet is highly important. In order to avoid this situation we normalized all the TFIDF scores.
+<p style="text-align: left;padding-left: 36px;"> • sometimes if a tweet is too big then the words in it can have higher TFIDF scores. It does not mean that the tweet is highly important. In order to avoid this situation we normalized all the TFIDF scores.
 
 </p>
 <h3 style="text-align: left;">Naive Bayes</h3>
