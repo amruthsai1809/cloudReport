@@ -4,8 +4,6 @@
 
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
-
-
 </head>
 <body>
 
@@ -79,7 +77,7 @@
     <h2>Implementation</h2>
     <h3 style="text-align: left;">Pre-processing</h3>
     <p style="text-align: left;">We used tokenizer to identify words in a given tweet. Some common words like is, the, etc do not provide critical information and take up space. In order to avoid this we removed these kind of words before imlplementing any algorithms.
-    We also removed redundant information associated with any word. For example in the words like Hadoop123, we removed the digits 123 in it.  </p>
+    We also removed redundant information associated with any word. For example in the words like Hadoop123, we removed the digits 123 in it. We consider the tweets which have a minimum length of 2 words and a maximum length of 20 words.</p>
     <h3 style="text-align: left;">TFIDF</h3>
     <p style="text-align: left;">The TFIDF scores are calculated as follows
     </p>
